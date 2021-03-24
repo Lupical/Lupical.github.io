@@ -1,0 +1,237 @@
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none;
+}
+
+@font-face {
+	font-family: "AkrobatRegular";
+	src: url("../fonts/Akrobat-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Intro";
+	src: url("../fonts/Intro.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+.is_overlay {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#trailer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#trailer::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.541);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#trailer>video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.box {
+	width: 900px;
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 40%;
+	transform: translate(0, -40%);
+}
+
+.title {
+	text-align: center;
+	font-family: "Intro";
+	font-size: 190px;
+	color: white;
+}
+
+.btn {
+	display: inline-block;
+	/* Строчно-блочный элемент */
+	background: #8C959D;
+	/* Серый цвет фона */
+	color: #fff;
+	/* Белый цвет текста */
+	padding: 1rem 1.5rem;
+	/* Поля вокруг текста */
+	text-decoration: none;
+	/* Убираем подчёркивание */
+	border-radius: 3px;
+	/* Скругляем уголки */
+}
+
+@media (min-aspect-ratio: 16/9) {
+	#trailer>video {
+		height: 300%;
+		top: -100%;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	#trailer>video {
+		width: 300%;
+		left: -100%;
+	}
+}
+
+@supports (object-fit: cover) {
+	#trailer>video {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.navigation {
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	z-index: 50;
+	background: rgba(0, 0, 0, 0.418);
+	box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.589);
+	backdrop-filter: blur( 5.5px);
+	-webkit-backdrop-filter: blur( 5.5px);
+	border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.navBox {
+	width: 60px;
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-family: "AkrobatRegular";
+	padding-top: 9px;
+}
+
+.nav2 {
+	display: block;
+	float: right;
+	margin-left: auto;
+	margin-right: 3%;
+	display: flex;
+	flex-direction: row;
+}
+
+.logo {
+	display: block;
+	float: left;
+	height: 40px;
+	width: 60px;
+	background-color: #d24d57;
+	margin: 0;
+	padding: 0;
+	margin-left: 2%;
+}
+
+.navLabel {
+	color: #f6f6f6;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.navLabel:hover {
+	transition: 0.2s;
+	color: #d24d57;
+}
+
+.navLabelActive {
+	color: #d24d57;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.nextPage {
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: absolute;
+	left: 32%;
+	top: 70%;
+	border: 4px solid #d24d57;
+	text-decoration: none;
+	font-size: 50px;
+	font-family: "Intro";
+	width: 320px;
+	height: 100px;
+	transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+	z-index: 1003;
+}
+
+.nextPage:hover:before {
+	right: 0%;
+	left: auto;
+	width: 100%;
+}
+
+.nextPage:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: #d24d57;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.whiteOverlay {
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	height: 100vh;
+	z-index: 2000;
+	animation: enter 4s alternate;
+	animation-fill-mode: forwards;
+	pointer-events: none;
+}
+
+@keyframes enter {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

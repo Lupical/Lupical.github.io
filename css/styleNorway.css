@@ -1,0 +1,558 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+ @font-face{
+     font-family: "AkrobatRegular";
+     src:url("../fonts/Akrobat-Regular.ttf") format("truetype");
+     font-style: normal;
+     font-weight: normal;
+}
+ @font-face{
+     font-family: "Intro";
+     src:url("../fonts/Intro.ttf") format("truetype");
+     font-style: normal;
+     font-weight: normal;
+}
+ .whiteOverlay{
+     position:absolute;
+     background-color: #fff;
+     width: 100%;
+     height: 100vh;
+     z-index: 2000;
+     animation: enter 4s alternate;
+     animation-fill-mode: forwards;
+     pointer-events: none;
+}
+ @keyframes enter{
+     from{
+        opacity: 1;
+    }
+     20%{
+        opacity: 1;
+    }
+     to{
+        opacity: 0;
+    }
+}
+ body{
+     background-color: #f6f6f6;
+     color: white;
+     display: none;
+}
+ .sec1{
+     background: url(../img/bg4.jpg);
+     background-size: cover;
+     height: 800px;
+     background-position: center center;
+     background-size: 100%;
+     background-attachment: fixed;
+}
+ .sec1:after{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #32323275;
+}
+ .sec2{
+     background: url(../img/bg3.jpg);
+     background-size: cover;
+     height: 600px;
+     background-position: center center;
+     background-size: 100%;
+     background-attachment: fixed;
+}
+ .sec2:after{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #32323275;
+}
+ section{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+ .header{
+     width: 100%;
+}
+ section img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     pointer-events: none;
+}
+ #text{
+     position: relative;
+     color: #f6f6f6;
+     font-size: 12em;
+     z-index: 1;
+     padding-bottom: 100px;
+     font-family: "INTRO";
+     text-shadow: 3px 4px 10px #02010170;
+}
+ #forest{
+     z-index: 2;
+}
+ .mainBlock{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     max-width: 1000px;
+     margin: auto;
+     padding-top: 70px;
+     padding-bottom: 70px;
+}
+
+ .block1{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 94%;
+     margin: 0 auto;
+     height: 700px;
+}
+ .block2{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 900px;
+     margin-top: 50px;
+}
+ .block3{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     height: 560px;
+     width: 1000px;
+}
+ .block4{
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: center;
+     height: 565px;
+     width: 1000px;
+}
+ .block5{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     height: 750px;
+}
+ .leftBlock{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 400px;
+     padding: 30px;
+     float: left;
+     height: 600px;
+     margin-top: 20px;
+     margin-left: 40px;
+}
+ .rightBlock{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 400px;
+     padding: 30px;
+     float: right;
+     height: 600px;
+     margin-top: 20px;
+     margin-right: 40px;
+}
+ .image1{
+     float: left;
+     width: 370px;
+     margin: 10px;
+     position: absolute;
+     box-shadow: 0 0 35px #323232;
+     z-index: 2;
+}
+
+ .fjord1{
+     display: block;
+     float: left;
+     margin: 70px 100px 30px 100px;
+     width: 800px;
+     position: relative;
+     box-shadow: 0 0 35px #323232;
+     z-index: 2;
+}
+ .fjord2{
+     display: block;
+     float: left;
+     margin: 30px;
+     width: 350px;
+     height: 500px;
+     position: relative;
+     object-fit:fill;
+     box-shadow: 0 0 35px #323232;
+     z-index: 2;
+}
+ .fjord3{
+     display: block;
+     float: right;
+     margin: 30px;
+     width: 350px;
+     height: 500px;
+     position: relative;
+     box-shadow: 0 0 35px #323232;
+     object-fit:fill;
+     z-index: 2;
+}
+ .fjord4{
+     display: block;
+     float: right;
+     margin:30px;
+     margin-bottom: 40px;
+     width: 350px;
+     position: relative;
+     object-fit:fill;
+     box-shadow: 0 0 35px #323232;
+     z-index: 2;
+}
+ .text1{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border: 5px solid #323232;
+     padding-left: 100px;
+     padding-right: 20px;
+     color: #323232;
+     float: right;
+     width: 500px;
+     height:350px;
+     margin-left: 340px;
+     margin-top: 50px;
+}
+ .text2{
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     color: #323232;
+     float: left;
+     width: 800px;
+     height:300px;
+     margin: auto;
+     margin-top: 20px;
+     text-align: center;
+}
+ .text3{
+     position: relative;
+     width: 600px;
+     height:300px;
+     margin: auto;
+     color: #323232;
+     margin-top: 80px;
+     margin-right: 40px;
+     margin-left: 20px;
+     text-align: left;
+     float: right;
+}
+ .text4{
+     position: relative;
+     width: 570px;
+     height:400px;
+     color: #323232;
+     float: left;
+     text-align: right;
+     margin-right: 30px;
+     margin-top: 90px;
+}
+ .long{
+     height: 400px;
+     width: 530px;
+     margin-left: 35px;
+}
+ p{
+     letter-spacing: 0.8px;
+     font-size: 20px;
+     color: #323232;
+     font-family: "AkrobatRegular";
+}
+ h2{
+     text-align: center;
+     font-size: 50px;
+     color: #323232;
+     font-family: "Intro";
+}
+ h3{
+     text-align: center;
+     font-size: 35px;
+     float: left;
+     position: relative;
+     padding-bottom: 20px;
+     font-family: "Intro";
+     color: #323232;
+}
+ hr{
+     margin:35px;
+     margin-left: auto;
+     margin-right: auto;
+     color:#d24d57;
+    /* Цвет линии для остальных браузеров */
+     background-color: #323232;
+     border: none;
+     height: 4px;
+     width: 100%;
+}
+ .mediumHeader{
+     font-family: "Intro";
+     font-size: 90px;
+     color: white;
+     z-index: 6;
+}
+ .decor{
+     text-align: center;
+     font-family: "INTRO";
+     font-size: 20px;
+     margin-top: 35px;
+     z-index: 6;
+     position: relative;
+     color: #f6f6f6;
+}
+ .headerRight{
+     margin-bottom: 40px;
+     float: right;
+     text-align: left;
+     width: 530px;
+     color: #323232;
+     font-family: "Intro";
+}
+ .headerLeft{
+     margin-bottom: 40px;
+     color: #323232;
+     float: left;
+     text-align: right;
+     width: 550px;
+     font-family: "Intro";
+}
+ .nature{
+     display: block;
+     position: relative;
+     font-family: "Intro";
+     font-size: 90px;
+     text-align: right;
+     margin:110px 50px 0px 60px;
+     color: #323232;
+     float: right;
+     width: 400px;
+}
+ .subHeader{
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: center;
+     width: 1000px;
+     height: 350px;
+}
+ .mainText{
+     width: 500px;
+     font-size: 19px;
+     color: white;
+     float: left;
+     position: relative;
+     width: 700px;
+     margin: 50px 0 0px 40px;
+     text-align: right;
+}
+ .menu{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     position: relative;
+     width: 1000px;
+     height: 700px;
+     margin : auto;
+     margin-top: 50px;
+}
+ .cap{
+     position: relative;
+     display: flex;
+     justify-content: center;
+     overflow:hidden;
+     float: left;
+     width: 280px;
+     height: 600px;
+     margin: 25px;
+     border-radius: 30px;
+     background-color: #323232;
+     color: #f6f6f6;
+     box-shadow: 0 0 35px #323232;
+     transition: 0.5s;
+}
+ .cap:hover{
+     transition: 0.7s;
+     transform: scale(1.09);
+}
+ .cap:hover .capImage{
+     transition: 0.7s;
+     transform: scale(1.1);
+}
+ .capImage{
+     width: 300px;
+     position: absolute;
+     transition: 0.7s;
+}
+ .box2{
+     width: 120px;
+     height: 100px;
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     z-index: 2;
+     background: inherit;
+     overflow: hidden;
+     box-sizing: border-box;
+     margin: 165px 0px 80px 0px;
+     background: #f6f6f631;
+     box-shadow: 0 8px 20px 0 #323232;
+     backdrop-filter: blur( 6.0px );
+     -webkit-backdrop-filter: blur( 6.0px );
+     border-radius: 10px;
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+ .smallText{
+     padding: 30px;
+     padding-top: 280px;
+     font-size: 17px;
+     color: #ffffff;
+     text-align: center;
+}
+ .quote{
+     font-size: 25px;
+     text-align: center;
+     width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 40px;
+}
+
+ .nextPage {
+     color: #fff;
+     cursor: pointer;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     position: relative;
+     border: 4px solid #d24d57;
+     text-decoration: none;
+     font-size: 70px;
+     font-family: "Intro";
+     width: 350px;
+     height: 130px;
+     background: rgba(255, 255, 255, 0);
+     backdrop-filter: blur( 5.5px );
+     -webkit-backdrop-filter: blur( 5.5px );
+     transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+     z-index: 1003;
+}
+ .nextPage:hover:before {
+     right: 0%;
+     left: auto;
+     width: 100%;
+     color: #fff;
+}
+ .nextPage:before {
+     display: block;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     height: 100%;
+     width: 0px;
+     z-index: -1;
+     content: '';
+     color: #000 !important;
+     background: #d24d57;
+     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+ .footer{
+     display: flex;
+     font-family: 'Roboto', sans-serif;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     background-color: #323232;
+     color: #ffffff;
+     font-size: 17px;
+     height: 100px;
+     width: 100%;
+}
+ .navigation{
+     width: 100%;
+     height: 40px;
+     position: fixed;
+     margin: 0;
+     display: flex;
+     flex-direction: row;
+     justify-content: right;
+     z-index: 50;
+     background: rgba(255, 255, 255, 0.644);
+     backdrop-filter: blur( 5.5px );
+     -webkit-backdrop-filter: blur( 5.5px );
+     border: 1px solid rgba(255, 255, 255, 0.11);
+}
+ .navBox{
+     width: 60px;
+     font-size: 20px;
+     text-align: center;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     font-family: "AkrobatRegular";
+     padding-top: 9px;
+}
+ .nav2{
+     display: block;
+     float: right;
+     margin-left: auto ;
+     margin-right: 3% ;
+     display: flex;
+     flex-direction: row;
+}
+ .logo{
+     display: block;
+     float: left;
+     height: 40px;
+     width: 60px;
+     background-color: #d24d57;
+     margin: 0;
+     padding: 0;
+     margin-left: 2%;
+}
+ .navLabel{
+     color: #323232;
+     text-decoration: none;
+     transition: 0.3s;
+}
+ .navLabel:hover{
+     transition: 0.2s;
+     color: #d24d57;
+}
+ .navLabelActive{
+     color: #d24d57;
+     text-decoration: none;
+     transition: 0.3s;
+}
+ .navLabelActive:hover{
+     color: #d24d57;
+}
+ 
